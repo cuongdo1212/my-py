@@ -1,0 +1,11 @@
+name: train_model
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - numpy
+  - scikit-learn
+  - pip:
+      - tensorflow==2.13.0

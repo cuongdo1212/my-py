@@ -1,0 +1,20 @@
+dùng cho việc chạy file số 1,2
+conda env create -f key_point.yml
+conda activate key_point
+
+
+dùng cho file số 3,4,5,0,00
+
+conda env create -f train_model.yml
+conda activate train_model
+lưu ý nên cài mediaipe trước để tránh numpy cài sau
+pip install mediapipe==0.10.9
+pip install numpy==1.24.3
+pip install flask
+
+--tạo moi trường mới
+conda create -n sign_web python=3.10
+conda activate sign_web
+pip install tensorflow==2.13.0
+pip install mediapipe==0.10.9
+pip install flask opencv-python

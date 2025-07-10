@@ -1,0 +1,11 @@
+name: key_point
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - opencv
+  - numpy
+  - pip
+  - pip:
+      - mediapipe==0.10.9

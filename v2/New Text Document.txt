@@ -1,0 +1,72 @@
+🧩 1. Xác định mục tiêu và phạm vi dự án
+Xác định bài toán cụ thể: Nhận diện chữ cái, từ đơn, câu, hay tương tác thời gian thực?
+
+Ngôn ngữ ký hiệu nào?: ASL (Mỹ), VSL (Việt Nam), BSL (Anh), v.v.
+ 
+Phạm vi dữ liệu: Cố định camera? Dữ liệu 2D hay 3D?
+
+📦 2. Thu thập và xử lý dữ liệu
+Nguồn dữ liệu:
+
+Dữ liệu công khai (như RWTH-PHOENIX, WLASL, ASLLVD).
+
+Tự quay video, ảnh từ người thật thực hiện ký hiệu.
+
+Xử lý dữ liệu (Preprocessing):
+
+Chuẩn hóa độ phân giải, ánh sáng.
+
+Tách tay/người bằng kỹ thuật segment/pose estimation (như MediaPipe).
+
+Đánh nhãn dữ liệu.
+
+🧠 3. Chọn mô hình AI và kiến trúc
+Mô hình học máy truyền thống:
+
+SVM, KNN nếu chỉ nhận dạng chữ cái đơn lẻ.
+
+Deep Learning:
+
+CNN: Xử lý ảnh tĩnh (ký hiệu từng chữ).
+
+RNN / LSTM / GRU: Nhận dạng chuỗi ký hiệu (video).
+
+Transformers: Cho kết quả tốt hơn trong bài toán nhận diện video dài (ví dụ: Sign2Text).
+
+Multimodal Models: Dùng cả ảnh, xương tay, hoặc chuyển động khung xương (pose-based models).
+
+⚙️ 4. Huấn luyện và đánh giá mô hình
+Chia dữ liệu: Train / Validation / Test.
+
+Huấn luyện: Dựa trên kiến trúc đã chọn, tinh chỉnh các tham số.
+
+Đánh giá:
+
+Accuracy / Top-k Accuracy (nếu phân loại).
+
+BLEU, WER (nếu chuyển sang văn bản).
+
+Đánh giá theo khung thời gian (nếu nhận dạng động tác theo thời gian).
+
+🧪 5. Triển khai và tối ưu
+Triển khai lên ứng dụng:
+
+Web (với TensorFlow.js), Mobile (TensorFlow Lite, ONNX).
+
+Kết hợp webcam, micro (nếu đa phương thức).
+
+Tối ưu:
+
+Nén mô hình.
+
+Đẩy lên cloud hoặc dùng Edge AI.
+
+Giảm độ trễ thời gian thực.
+
+🔁 6. Thu thập phản hồi và cải tiến
+Thu thập dữ liệu mới từ người dùng thực tế.
+
+Fine-tune mô hình với dữ liệu thực tế.
+
+Cải thiện UX/UI và phản hồi mô hình theo thời gian.
+
